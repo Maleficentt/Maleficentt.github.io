@@ -58,14 +58,14 @@
   <meta name="description" content="要有最朴素的生活，和最遥远的梦想，即使明日天寒地冻，路遥马亡。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Maleficent&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta property="og:url" content="https://maleficentt.github.io/archives/2019/index.html">
 <meta property="og:site_name" content="Maleficent&#39;s Blog">
 <meta property="og:description" content="要有最朴素的生活，和最遥远的梦想，即使明日天寒地冻，路遥马亡。">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maleficent&#39;s Blog">
 <meta name="twitter:description" content="要有最朴素的生活，和最遥远的梦想，即使明日天寒地冻，路遥马亡。">
-  <link rel="canonical" href="http://yoursite.com/archives/2019/">
+  <link rel="canonical" href="https://maleficentt.github.io/archives/2019/">
 
 
 <script id="page-configurations">
@@ -171,11 +171,11 @@
       
         
         
-        <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-categories">
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
       
@@ -184,11 +184,11 @@
       
         
         
-        <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-tags">
       
     
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
       
@@ -322,16 +322,16 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2019-10-09T17:33:54+08:00"
-              content="2019-10-09">
-          10-09
+              datetime="2019-10-12T14:21:50+08:00"
+              content="2019-10-12">
+          10-12
         </time>
       </div>
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/10/09/hello-world/" itemprop="url">
-            <span itemprop="name">Maleficent</span>
+          <a class="post-title-link" href="/2019/10/12/使用hexo来搭建个人博客——建站/" itemprop="url">
+            <span itemprop="name">使用hexo来搭建个人博客————建站</span>
           </a>
         
       </h2>
@@ -397,6 +397,32 @@
         
           <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
         </a>
       </div>
     
@@ -594,15 +620,31 @@
 
   
 
+
 <script>
-  function loadCount() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://maleficent.disqus.com/count.js';
-    s.id = 'dsq-count-scr';
-    (d.head || d.body).appendChild(s);
-  }
-  // defer loading until the whole page loading is completed
-  window.addEventListener('load', loadCount, false);
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'eq2Y1L1S9FaiPP6cikkwPGD6-gzGzoHsz',
+    appKey: 'EokRjkBRdNfMTCvQBQ9usuhf',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
 </script>
 
 </body>
